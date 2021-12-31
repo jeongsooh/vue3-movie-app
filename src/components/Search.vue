@@ -77,30 +77,48 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .container {
+
+.container {
+  display: flex;
+  > * {
+    margin-right: 10px;
+    font-size: 15px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .selects {
     display: flex;
-    > * {
+    select {
+      width: 120px;
       margin-right: 10px;
-      font-size: 15px;
       &:last-child {
         margin-right: 0;
       }
     }
+  }
+  .btn {
+    width: 120px;
+    height: 50px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  @include media-breakpoint-down(lg) {
+    display: block;
+    input {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
     .selects {
-      display: flex;
+      margin-right: 0;
+      margin-bottom: 10px;
       select {
-        width: 120px;
-        margin-right: 10px;
-        &:last-child {
-          margin-right: 0;
-        }
+        width: 100%;
       }
     }
     .btn {
-      width: 120px;
-      height: 50px;
-      font-weight: 700;
-      flex-shrink: 0;
+      width: 100%;
     }
   }
+}
 </style>

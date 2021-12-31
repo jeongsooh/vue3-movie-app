@@ -54,12 +54,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/scss/main";
 
 .movie {
   $width: 200px;
   width: $width;
-  height: $width * 3 / 2;
+  height: calc($width * 3 / 2);
   margin: 10px;
   border-radius: 4px;
   background-color: $gray-400;
