@@ -1,2 +1,14 @@
+# Netlify dev
+# https://cli.netlify.com/netlify-dev/#netlifytoml-dev-block
+
 [build]
+  command = "npm run build"
   functions = "functions"
+  publish = "dist"
+[dev]
+  framework = "#custom"
+  command = "npm run dev"
+  targetPort = 8080
+  port = 8888
+  publish = "dist"
+  autoLaunch = false
